@@ -6,18 +6,18 @@ body{
 	font-family: "PT Sans", "Arial", sans-serif;
 }
 
-h1{
-	font-size:;
-	line-height:;
-	color:;
-	font-weight:;
-	font-family:;
+h1.title{
+	font-size: 21px;
+	line-height: auto;
+	color: #000000;
+	font-weight: bold;
+	font-family: "PT Sans", "Arial", sans-serif;;
 }
 
-h2{
-	font-size:;
-	line-height:;
-	color:;
-	font-weight:;
-	font-family:;	
+h2.hotel-search-subtitle{
+	font-size: 30px;
+	line-height: auto;
+	color: #000000;
+	font-weight: bold;
+	font-family: "PT Sans", "Arial", sans-serif;;;	
 }
