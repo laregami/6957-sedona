@@ -6,6 +6,7 @@
         <title>Гостиницы в Седоне</title>
     </head>
     <body>
+	  <div id="container">
         <header class="central-container">
             <div class="main-header">
                 <div class="logo-in-navigation">
@@ -24,9 +25,8 @@
             </div>
         </header>
         <main class="central-container">
-            <div class="filter-block">
-                <div class="filter">
-                    <form>
+
+                    <form class="filter">
                         <fieldset>
                             <legend>Инфраструктура:</legend>
                             <input type="checkbox" name="infrastructure" id="pool"><label for="pool">Бассейн</label>
@@ -41,22 +41,21 @@
                         </fieldset>
                         <fieldset>
                             <legend>Стоимость в сутки (р):</legend>
-                            <p>от 0</p>
-                            <p>до 3000</p>
-                            <input type="number" min="0" max="3000" name="cost-per-day" id="cost"><label for="cost"></label>
+                            <span>от 0</span>
+                            <span>до 3000</span>
+                            <input type="range" min="0" max="3000" name="cost-per-day" id="cost">
                         </fieldset>
                         <input class="button" type="submit" value="Показать">
                     </form>
-                </div>
-            </div>
+
             <div class="results">
                 <h1 class="title">Найдено: 3</h1>
                 <div class="results-sorting">
                     <div class="types-sorting">
                         <div>Сортировка:</div>
-                        <div><a class="chosen-type-sorting" href="">По цене</a></div>
-                        <div><a href="">По типу</a></div>
-                        <div><a href="">По рейтингу</a></div>
+                        <a class="chosen-type-sorting" href="">По цене</a>
+                        <a href="">По типу</a>
+                        <a href="">По рейтингу</a>
                     </div>
                     <div class="output-options">
                         <div><a href="#">По убыванию</a></div>
@@ -67,7 +66,7 @@
                     <article>
                         <div class="hotels-list-picture">
                             <figure class="picture">
-                                <img src="img/content/hotels-list-Amara-Resort-Spa.jpg" width="135px" height="90px" alt="">
+                                <img src="img/content/hotels-list-amara-resort-spa.jpg" width="135px" height="90px" alt="">
                             </figure>
                         </div>
                         <div class="hotels-list-main-part">
@@ -78,17 +77,17 @@
                             <a class="button-book-it" href="">Забронировать</a>
                         </div>
                         <div class="hotels-list-rating">
-                            <div class="star"></div>
-                            <div class="star"></div>
-                            <div class="star"></div>
-                            <div class="star"></div>
+                            <div class="star">*</div>
+                            <div class="star">*</div>
+                            <div class="star">*</div>
+                            <div class="star">*</div>
                             <div class="rating">Рейтинг: 8,5</div>
                         </div>
                     </article>
                     <article>
                         <div class="hotels-list-picture">
                             <figure class="picture">
-                                <img src="img/content/hotels-list-Desert-Quail-Inn.jpg" width="135px" height="90px" alt="">
+                                <img src="img/content/hotels-list-desert-quail-inn.jpg" width="135px" height="90px" alt="">
                             </figure>
                         </div>
                         <div class="hotels-list-main-part">
@@ -99,16 +98,16 @@
                             <a class="button-book-it" href="">Забронировать</a>
                         </div>
                         <div class="hotels-list-rating">
-                            <div class="star"></div>
-                            <div class="star"></div>
-                            <div class="star"></div>
+                            <div class="star">*</div>
+                            <div class="star">*</div>
+                            <div class="star">*</div>
                             <div class="rating">Рейтинг: 8,9</div>
                         </div>
                     </article>
                     <article>
                         <div class="hotels-list-picture">
                             <figure class="picture">
-                                <img src="img/content/hotels-list-Villas-at-Poco-Diablo.jpg" width="135px" height="90px" alt="">
+                                <img src="img/content/hotels-list-villas-at-poco-diablo.jpg" width="135px" height="90px" alt="">
                             </figure>
                         </div>
                         <div class="hotels-list-main-part">
@@ -119,8 +118,8 @@
                             <a class="button-book-it" href="">Забронировать</a>
                         </div>
                         <div class="hotels-list-rating">
-                            <div class="star"></div>
-                            <div class="star"></div>
+                            <div class="star">*</div>
+                            <div class="star">*</div>
                             <div class="rating">Рейтинг: 9,2</div>
                         </div>
                     </article>
@@ -145,5 +144,6 @@
                 </section>
             </div>
         </footer>
-    </body>
+      </div>
+	</body>
 </html>
