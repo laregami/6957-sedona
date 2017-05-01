@@ -1,3 +1,4 @@
+html,
 body{
 	font-size: 14px;
 	line-height: 1em;
@@ -11,7 +12,7 @@ h1.title{
 	line-height: auto;
 	color: #000000;
 	font-weight: bold;
-	font-family: "PT Sans", "Arial", sans-serif;;
+	font-family: "PT Sans", "Arial", sans-serif;
 }
 
 h2.hotel-search-subtitle{
@@ -19,5 +20,207 @@ h2.hotel-search-subtitle{
 	line-height: auto;
 	color: #000000;
 	font-weight: bold;
-	font-family: "PT Sans", "Arial", sans-serif;;;	
+	font-family: "PT Sans", "Arial", sans-serif;
 }
+
+body{
+    background: #f2f2f2;
+}
+
+.central-container{
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0 73px;
+}
+
+	/*меню*/
+
+.main-header{
+	display: flex;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.logo-in-navigation{
+	width: 180px;
+	min-height: 70px;
+	
+}
+
+.main-navigation{
+	width:1056px;
+}
+
+	/*оcновная часть index*/
+
+.main-picture{
+	display: flex;
+	justify-content: center;
+    min-height: 508px;
+    margin-bottom: 60px;
+}
+
+.title{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 38px;
+
+}
+
+.subtitle{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 58px;
+
+}
+
+.reasons{
+	display: flex;
+	flex-direction: column;
+	min-height: 1098px;
+    margin-bottom: 58px;
+}
+
+.reason-with-picture {
+	display: flex;
+	min-height: 256px;
+}
+
+.reason-with-icon {
+	display: flex;
+    min-height: 330px;
+	
+}
+
+.reason-without-icon {
+	display: flex;
+	min-height: 256px;
+}
+  
+.reason-description {
+	width: 400px;
+}
+
+.reason-picture-block {
+	width: 800px;
+}
+
+
+.hotel-search{
+	min-height: 291px;
+    display: flex;
+	flex-direction: column;
+}
+
+.hotel-search-title {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 38px;
+}
+
+.hotel-search-subtitle {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 54px;
+}
+
+.search-button{
+	width: 568px;
+	min-height: 68px;
+	margin-right: auto;
+    margin-left: auto;
+}
+
+.selection-dates-block{
+	min-height: 395px;
+	width: 568px;
+	margin-right: auto;
+    margin-left: auto;
+}
+
+.map{
+	min-height: 473px;
+}
+
+	/*основная часть inner*/
+
+.filter{
+	display: flex;
+    min-height: 217px;
+	padding-right: 73px;
+	padding-left: 73px;
+
+}
+
+.infrastructure{
+	width: 241px;
+}
+
+.housing-type{
+    margin-right: 200px;
+	width: 288px;
+}
+
+.cost{
+	width: 328px;
+}
+
+.sorting{
+    display: flex;
+	min-height: 83px;
+	padding-left: 73px;
+}
+
+.results-title{
+	width: 164px;
+}
+
+.results-sorting{
+	width: 894px;
+}
+
+.hotels-list{
+    display: flex;
+    flex-direction: column;
+}
+
+ .hotel{
+	display: flex;
+	min-height: 150px;
+}
+
+.hotels-list-picture{
+	width: 164px;
+	margin-right: 27px;
+}
+.hotels-list-main-part{
+	width: 280px;
+	margin-right: 498px;
+}
+ 
+.hotels-list-main-part{
+	width: 241px;
+}
+ 
+	/*подвал*/
+
+.main-footer{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 73px;
+  padding-right: 73px;
+}
+
+.footer-hashtag{
+	width: 240px;
+}
+
+.footer-social {
+	width: 400px;
+}
+
+.footer-copyright{
+	width: 240px;
+}
+
+
