@@ -9,7 +9,7 @@ body{
 
 h1.title{
 	font-size: 21px;
-	line-height: auto;
+	line-height: normal;
 	color: #000000;
 	font-weight: bold;
 	font-family: "PT Sans", "Arial", sans-serif;
@@ -17,7 +17,7 @@ h1.title{
 
 h2.hotel-search-subtitle{
 	font-size: 30px;
-	line-height: auto;
+	line-height: normal;
 	color: #000000;
 	font-weight: bold;
 	font-family: "PT Sans", "Arial", sans-serif;
@@ -30,7 +30,7 @@ body{
 .central-container{
 	width: 1200px;
 	margin: 0 auto;
-	padding: 0 73px;
+	padding: 0 75px;
 }
 
 	/*меню*/
@@ -44,11 +44,34 @@ body{
 .logo-in-navigation{
 	width: 180px;
 	min-height: 70px;
+	position: absolute;
+	display: flex; 
+	background: red;
+	right: 660px;
 	
 }
 
 .main-navigation{
-	width:1056px;
+	width: 1200px;
+	padding-left: 75px;
+	padding-right: 75px;
+	
+}
+
+.main-navigation ul {
+    display: flex;
+    justify-content: space-between;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+
+.main-navigation ul li {
+	width : 100px;
+	height: 100px;
+	vertical-align: bottom;
+	text-align: center;
 }
 
 	/*оcновная часть index*/
@@ -56,34 +79,33 @@ body{
 .main-picture{
 	display: flex;
 	justify-content: center;
-    min-height: 508px;
     margin-bottom: 60px;
 }
 
 .title{
 	display: flex;
 	justify-content: center;
-	margin-bottom: 38px;
+	margin-bottom: 40px;
 
 }
 
 .subtitle{
 	display: flex;
 	justify-content: center;
-	margin-bottom: 58px;
+	margin-bottom: 60px;
 
 }
 
 .reasons{
 	display: flex;
 	flex-direction: column;
-	min-height: 1098px;
-    margin-bottom: 58px;
+	min-height: 1100px;
+    margin-bottom: 60px;
 }
 
 .reason-with-picture {
 	display: flex;
-	min-height: 256px;
+	min-height: 255px;
 }
 
 .reason-with-icon {
@@ -94,7 +116,7 @@ body{
 
 .reason-without-icon {
 	display: flex;
-	min-height: 256px;
+	min-height: 255px;
 }
   
 .reason-description {
@@ -107,7 +129,7 @@ body{
 
 
 .hotel-search{
-	min-height: 291px;
+	min-height: 290px;
     display: flex;
 	flex-direction: column;
 }
@@ -115,68 +137,67 @@ body{
 .hotel-search-title {
 	display: flex;
 	justify-content: center;
-	margin-bottom: 38px;
+	margin-bottom: 40px;
 }
 
 .hotel-search-subtitle {
 	display: flex;
 	justify-content: center;
-	margin-bottom: 54px;
+	margin-bottom: 55px;
 }
 
 .search-button{
-	width: 568px;
-	min-height: 68px;
+	width: 570px;
+	min-height: 70px;
 	margin-right: auto;
     margin-left: auto;
 }
 
 .selection-dates-block{
-	min-height: 395px;
-	width: 568px;
+	width: 570px;
 	margin-right: auto;
     margin-left: auto;
 }
 
 .map{
-	min-height: 473px;
+	min-height: 475px;
 }
 
 	/*основная часть inner*/
 
 .filter{
 	display: flex;
-    min-height: 217px;
-	padding-right: 73px;
-	padding-left: 73px;
+    min-height: 215px;
+	padding-right: 75px;
+	padding-left: 75px;
 
 }
 
 .infrastructure{
-	width: 241px;
+	width: 240px;
 }
 
 .housing-type{
     margin-right: 200px;
-	width: 288px;
+	width: 290px;
 }
 
 .cost{
-	width: 328px;
+	width: 330px;
 }
 
 .sorting{
     display: flex;
-	min-height: 83px;
-	padding-left: 73px;
+	min-height: 85px;
+	padding-left: 75px;
 }
 
 .results-title{
-	width: 164px;
+	width: 165px;
 }
 
 .results-sorting{
-	width: 894px;
+	width: 895px;
 }
 
 .hotels-list{
@@ -186,20 +207,21 @@ body{
 
  .hotel{
 	display: flex;
+	align-items: center;
 	min-height: 150px;
 }
 
 .hotels-list-picture{
-	width: 164px;
-	margin-right: 27px;
+	width: 165px;
+	margin-right: 30px;
 }
 .hotels-list-main-part{
 	width: 280px;
-	margin-right: 498px;
+	margin-right: 500px;
 }
  
 .hotels-list-main-part{
-	width: 241px;
+	width: 240px;
 }
  
 	/*подвал*/
@@ -207,8 +229,9 @@ body{
 .main-footer{
   display: flex;
   justify-content: space-between;
-  padding-left: 73px;
-  padding-right: 73px;
+  align-items: center;
+  padding-left: 75px;
+  padding-right: 75px;
 }
 
 .footer-hashtag{
@@ -222,5 +245,3 @@ body{
 .footer-copyright{
 	width: 240px;
 }
-
-
