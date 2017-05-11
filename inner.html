@@ -40,23 +40,22 @@
                             <p><input type="checkbox" name="housing-type" id="apartments"><label for="apartments">Апартаменты</label></p>
                         </fieldset>
                     </div>
-                    <div class="cost">
-                        <fieldset class="elist">
-                            <legend>Стоимость в сутки (р):</legend>
-							<div class="zero-three-thousand">
-                            <div class="zero">от <span>0</span></div>
-                            <!--<input type="range" min="0" max="3000" value="0">-->
-                            <div class="three-thousand">до <span>3000</span></div>
-                            <!--<input type="range" min="0" max="3000" value="3000">-->
-							</div>
-							<div class="scale">
-                                <div class="between"></div>
-                                <div class="toggle"></div>
-                                <div class="toggle"></div>
-                            </div>
-                        </fieldset>
-                        <input class="button" type="submit" value="Показать">
-                    </div>
+                        <div class="filter-range">
+      <div class="filter-range-title">Стоимость в сутки (р):</div>
+      <div class="price-controls">
+        <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+        <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+      </div>
+      <div class="range-controls">
+        <div class="scale">
+          <div class="bar"></div>
+        </div>
+        <div class="range-toggle range-toggle-min"></div>
+        <div class="range-toggle range-toggle-max"></div>
+      </div>
+      <button class="btn-transparent" type="submit">Показать</button>
+    </div>
+
                 </form>
                 <div class="sorting">
                     <div class="results-sorting">
@@ -154,23 +153,21 @@
                     </article>
                 </div>
             </main>
-            <footer>
-                <div class="main-footer">
-                    <section class="footer-hashtag">
-                        <a class="hashtag" href="https://twitter.com/search?q=%23VISITSEDONA&src=typd">#visitsedona</a>
-                    </section>
-                    <section class="footer-social">
-                        <a class="button" href="">Twitter</a>
-                        <a class="button" href="">Facebook</a>
-                        <a class="button" href="">YouTube</a>
-                    </section>
-                    <section class="footer-copyright">
-                        <p>website by  
-                            <a class="logo-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss"></a>
-                        </p>
-                    </section>
-                </div>
+            <footer class="main-footer">
+                <section class="footer-hashtag">
+                    <a class="hashtag" href="https://twitter.com/search?q=%23VISITSEDONA&src=typd">#visitsedona</a>
+                </section>
+                <section class="footer-social">
+                    <a class="button social-btn-tv" href="">Twitter</a>
+                    <a class="button social-btn-fb" href="">Facebook</a>
+                    <a class="button social-btn-yt" href="">YouTube</a>
+                </section>
+                <section class="footer-copyright">
+                    <p>website by</p>
+					<a class="logo-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">logo</a>
+                </section>
             </footer>
+        </div>
         </div>
     </body>
 </html>

@@ -84,6 +84,7 @@ a:active{
 
 .main-navigation{
 	width: 1200px;
+	position: relative;
 }
 
 .main-navigation ul {
@@ -119,13 +120,15 @@ ul li:nth-child(-n+2){
 	background-size: cover;
     background-position: 0 -80px;
 	margin-bottom: 60px;
+	
 }
 
 .main-picture:after {
 	content: url("http://www.performia-cis.ru/sedona/background/mask.png");
 	display: block;
+	max-width: 100%; 
 	position: absolute;
-	top: 508px;
+	bottom: -215px;
 }
 
 .title{
@@ -153,12 +156,14 @@ ul li:nth-child(-n+2){
 
 .reason-with-picture {
     display: flex;
+	color: #ffffff;
 	justify-content: space-between;
     align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
 	background-color: #81b3d2;
 }
+
 
 .reason-with-picture .reason-description{
 	padding-left: 45px;
@@ -175,31 +180,6 @@ ul li:nth-child(-n+2){
     margin: auto;
 	min-height: 330px;
 }
-
-.reason-with-icon:before {
-	content: url("http://www.performia-cis.ru/sedona/icons/icon-house.png");
-	display: block;
-	position: absolute;
-	top: 1095px;
-    left: 240px;
-}
-
-.reason-with-icon .reason-description:before {
-	content: url("http://www.performia-cis.ru/sedona/icons/icon-eat.png");
-	display: block;
-	position: absolute;
-	top: 1095px;
-    left: 640px;
-}
-
-.reason-with-icon .reason-description:after {
-	content: url("http://www.performia-cis.ru/sedona/icons/icon-souvenir.png");
-	display: block;
-	position: absolute;
-	top: 1095px;
-    right: 240px;
-}
-
 
 .reason-with-icon .reason-description{
 	padding-left: 60px;
@@ -230,16 +210,45 @@ ul li:nth-child(-n+2){
 	flex-shrink: 0;
 	flex-basis: 33.33333%;
     max-width: 33.33333%;
-	
+    position: relative;
+}
+
+.reason-description:before {
+  content: '';
+  position: absolute;
+  top: -45px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+}
+
+.reason-description.house:before {
+  width: 75px;
+  height: 72px;
+  background-image: url(http://www.performia-cis.ru/sedona/icons/icon-house.png);
+}
+.reason-description.eat:before {
+  width: 74px;
+  height: 72px;
+  background-image: url(http://www.performia-cis.ru/sedona/icons/icon-eat.png);
+}
+.reason-description.souvenir:before {
+  width: 64px;
+  height: 76px;
+  background-image: url(http://www.performia-cis.ru/sedona/icons/icon-souvenir.png);
 }
 
 .reason-picture-block {
 	display: flex;
-	flex-basis: 66.66667%;
-	max-width: 66.66667%;
+	flex-basis: 66.66666%;
+	max-width: 66.66666%;
 	height: 256px;
 }
 
+.reason-picture-block img{
+	max-width: 100%;
+}
     /*стили текста*/
 .reason-name {
 	display: block;
@@ -251,6 +260,7 @@ ul li:nth-child(-n+2){
 .reason-description p{
 	margin-top: 25px;
 	line-height: 18px;
+	
 }
 
     /*поиск отеля*/
@@ -270,6 +280,7 @@ ul li:nth-child(-n+2){
 }
 
 .search-button{
+	display: block;
 	font-family: "PT Sans", "Arial", sans-serif;
     font-size: 21px;
     font-weight: bold;
@@ -277,14 +288,13 @@ ul li:nth-child(-n+2){
 	color: #ffffff;
 	width: 570px;
 	min-height: 85px;
-	margin-right: auto;
-    margin-left: auto;
 	background-color: #766357;
 }
 
 .selection-dates-block{
 	display: flex;
 	flex-direction: column;
+	position: relative;
 	width: 570px;
 	margin-right: auto;
     margin-left: auto;
@@ -301,6 +311,7 @@ ul li:nth-child(-n+2){
 	display: flex;
 	flex-direction: column;
 	width: 570px;
+	top: 100%;
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -351,6 +362,14 @@ ul li:nth-child(-n+2){
 	margin-bottom: 45px;
 }
 
+input:hover {
+	background: #ebebeb;
+}
+
+input:focus {
+	background: #ffffff;
+}
+
 .hotel-search-form .button{
 	font-family: "PT Sans", "Arial", sans-serif;
     font-size: 21px;
@@ -362,6 +381,15 @@ ul li:nth-child(-n+2){
 	margin-right: auto;
     margin-left: auto;
 	background-color: #81b3d2;
+}
+
+.hotel-search-form .button:hover{
+	background-color: #669ec0;
+}
+
+.hotel-search-form .button:active{
+	color: #94b9d2;
+	background-color: #5496bd;
 }
 
 	/*основная часть inner*/
@@ -379,9 +407,8 @@ ul li:nth-child(-n+2){
 	color: #ffffff;
     padding-top: 30px;
 	min-height: 220px;
-	background: #e0eaf4 url("http://www.performia-cis.ru/sedona/background/blurred-background.jpg") no-repeat;
-    background-position: 0% 50%;
-	margin-bottom: 0px;
+	background: #e0eaf4 url("http://www.performia-cis.ru/sedona/background/blurred-background.jpg") no-repeat center;
+    background-position: -600px;
 }
 
 .infrastructure-and-type{
@@ -411,83 +438,140 @@ ul li:nth-child(-n+2){
 	margin-bottom: 25px;
 }
 
-.cost{
+.filter-range {
 	flex-grow: 0;
 	flex-shrink: 0;
     flex-basis: 30%;
     max-width: 30%;
+    width: 330px;
+
+    color: #ffffff;
+    text-transform: uppercase;
 }
 
-.zero-three-thousand{
-	display: flex;
+.filter-range-title {
+  margin-bottom: 9px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
 }
 
-.zero{
-    font-weight: bold;
-	color: #ffffff;
-	width: 160px;
-	padding-top: 7px;
-	min-height: 35px;
-    text-align: center;
-	border: 2px solid #ffffff;
-}
-
-.three-thousand{
-    font-weight: bold;
-	color: #ffffff;
-	width: 160px;
-	padding-top: 7px;
-	min-height: 35px;
-    text-align: center;
-	border: 2px solid #ffffff;
-    border-left: hidden;
-}
-
-.scale {
-  width: 200px;
-  height: 2px;
-  margin: 20px auto;
-  background: #ffffff;
-  opacity: 50%;
+.price-controls {
   position: relative;
+  
+  height: 36px;
+  margin-bottom: 20px;
+
+  font-size: 0;
+
+  border: 2px solid #ffffff;
+  border-radius: 2px;
 }
-.between {
-  height: 100%;
-  width: 50px;
-  background: #ffffff;
+
+.price-controls::after {
+  content: "";
   position: absolute;
-  top: 0;
+  top: 50%;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  font-size: 14px;
+  line-height: 38px;
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
   left: 0;
 }
-.toggle {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 1px solid #ffffff;
-  background: #ffffff;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -10px;
-  margin: auto;
-}
-.toggle:nth-child(2) {
-  left: 40px;
+
+.range-toggle-max {
+  left: 80%;
 }
 
-.cost .button{
-	font-family: "PT Sans", "Arial", sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-	text-transform: uppercase;
-	color: #ffffff;
-	width: 135px;
-	min-height: 30px;
-    text-align: center;
-	background-color: transparent;
-	border: 2px solid #ffffff;
-	cursor: pointer;
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
 }
+
+.btn-transparent:hover {
+  color: #000000;
+
+  background: #ffffff;
+}
+
 .sorting{
     display: flex;
 	justify-content: space-between;
@@ -651,10 +735,28 @@ ul li:nth-child(-n+2){
 	margin-right: 5px;	
 }	
 
+.read-more:hover{
+	background-color: #669ec0;
+}
+
+.read-more:active{
+	color: #94b9d2;
+	background-color: #5496bd;
+}
+
 .book-it{
     height: 30px;
 	width: 145px;
 	background-color: #766357; 
+}
+
+.book-it:hover{
+	background-color: #604e43;
+}
+
+.book-it:active{
+	color: #928a85;
+	background-color: #503e33;
 }
 
 .hotels-list-rating{
@@ -682,7 +784,7 @@ ul li:nth-child(-n+2){
 	font-size: 0;
     vertical-align: top;
     text-decoration: none;
-	background: #81b3d2 url("img/icons/star.png") no-repeat center;
+	background: url("http://www.performia-cis.ru/sedona/icons/star.png") no-repeat center;
 }
 
 .rating{
@@ -734,13 +836,21 @@ ul li:nth-child(-n+2){
 	background: #81b3d2 url("http://www.performia-cis.ru/sedona/icons/sprite-social1.png") no-repeat center;
 }
 
-.social-btn-tv{
+.footer-social .button:hover{
+	background: #669ec0 url("http://www.performia-cis.ru/sedona/icons/sprite-social1.png") no-repeat center;
+}
+
+.footer-social .button:active{
+	background: #5496bd url("http://www.performia-cis.ru/sedona/icons/sprite-social1.png") no-repeat center;
+}
+
+.button .social-btn-tv{
     background-position: 9px -447px;
 }
-.social-btn-fb{
+.button .social-btn-fb{
     background-position: 15px -171px;
 }
-.social-btn-yt{
+.button .social-btn-yt{
     background-position: 12px -313px;
 }
 
